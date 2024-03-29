@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --color_primary: #066;
+  --color_primary_light: hsl(180, 100%, 25%);
+  --color_primary_shadow: hsl(180, 100%, 15%);
+  --color_secondary: #809696;
+  --color_secondary_light: hsl(180, 9%, 70%);
+  --color_secondary_shadow: hsl(180, 9%, 40%);
+
+  --background: #f0f7f7;
+  --white: #fff;
+  --black: #0a2929;
+
+  --color_sucess: #066;
+  --color_warning: #ffbc00;
+  --color_danger: #ff8866;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+p,
+span {
+  font-size: 18px;
+}
+
+html,
+body {
+  background-color: var(--background);
+}
