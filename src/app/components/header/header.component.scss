@@ -1,7 +1,7 @@
 header {
   width: 100%;
   display: flex;
-  padding: 20px;
+  padding: 10px 20px;
   justify-content: space-between;
 
   img {
@@ -9,6 +9,9 @@ header {
   }
 
   .header-content {
+    display: flex;
+    align-items: center;
+
     nav ul {
       display: flex;
       list-style: none;
@@ -35,6 +38,20 @@ header {
             background-color: var(--color_primary);
           }
         }
+      }
+    }
+
+    &-search {
+      width: 100%;
+
+      input {
+        padding: 15px 20px;
+        border: none;
+        border-radius: 20px;
+        font-size: 14px;
+        color: var(--color_secondary);
+        font-weight: 300;
+        min-width: 300px;
       }
     }
   }

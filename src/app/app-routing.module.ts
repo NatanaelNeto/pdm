@@ -5,10 +5,10 @@ import { CardsComponent } from './pages/cards/cards.component';
 import { DecksComponent } from './pages/decks/decks.component';
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HomeComponent },
-  { path: 'cartas', component: CardsComponent },
-  { path: 'decks', component: DecksComponent },
+  { path: '', pathMatch: 'full', redirectTo: 'home', title: 'PDM | Home' },
+  { path: 'home', component: HomeComponent, title: 'PDM | Home' },
+  { path: 'cartas', component: CardsComponent, title: 'PDM | Cartas' },
+  { path: 'decks', component: DecksComponent, title: 'PDM | Decks' },
 ];
 
 @NgModule({
