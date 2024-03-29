@@ -49,3 +49,9 @@ body {
   height: 100vh;
   width: 100%;
 }
+
+img.svg {
+  &-primary {
+    filter: invert(13%) sepia(61%) saturate(6314%) hue-rotate(173deg) brightness(97%) contrast(101%);
+  }
+}

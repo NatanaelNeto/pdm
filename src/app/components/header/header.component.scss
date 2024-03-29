@@ -43,6 +43,7 @@ header {
 
     &-search {
       width: 100%;
+      position: relative;
 
       input {
         padding: 15px 20px;
@@ -52,6 +53,19 @@ header {
         color: var(--color_secondary);
         font-weight: 300;
         min-width: 300px;
+
+        &:focus {
+          outline: solid 3px var(--color_primary);
+        }
+      }
+
+      img {
+        height: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        right: 20px;
+
       }
     }
   }
