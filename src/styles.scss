@@ -38,11 +38,14 @@ h3 {
 }
 
 p,
-span {
+span,
+li {
   font-size: 18px;
 }
 
 html,
 body {
   background-color: var(--background);
+  height: 100vh;
+  width: 100%;
 }
