@@ -5,9 +5,10 @@
   </div>
   <nav>
     <ul>
-      <li>Listar</li>
-      <li>Detalhes</li>
-      <li>Editar</li>
+      <li routerLink="/cartas/listar" routerLinkActive="active">Listar</li>
+      <li routerLink="/cartas/detalhes" routerLinkActive="active">Detalhes</li>
+      <li routerLink="/cartas/editar" routerLinkActive="active">Editar</li>
     </ul>
   </nav>
+  <router-outlet></router-outlet>
 </section>
