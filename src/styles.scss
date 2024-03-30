@@ -27,6 +27,7 @@
 
 h1 {
   font-size: 40px;
+  font-weight: 300;
 }
 
 h2 {
@@ -48,10 +49,53 @@ body {
   background-color: var(--background);
   height: 100vh;
   width: 100%;
+  color: var(--black);
 }
 
 img.svg {
   &-primary {
     filter: invert(13%) sepia(61%) saturate(6314%) hue-rotate(173deg) brightness(97%) contrast(101%);
+  }
+}
+
+.content {
+  padding: 40px 60px;
+  max-width: 1100px;
+
+  .title {
+    margin-bottom: 40px;
+  }
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+
+  li {
+    padding: 0 20px;
+    color: var(--color_secondary);
+    font-weight: 400;
+
+    &.active {
+      color: var(--color_primary);
+      position: relative;
+      font-weight: 600;
+
+      &::after {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        content: '';
+        height: 4px;
+        width: 16px;
+        border-radius: 10px;
+        background-color: var(--color_primary);
+      }
+    }
+
+    &:first-child {
+      padding-left: 5px;
+    }
   }
 }

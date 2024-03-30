@@ -12,35 +12,6 @@ header {
     display: flex;
     align-items: center;
 
-    nav ul {
-      display: flex;
-      list-style: none;
-
-      li {
-        padding: 0 20px;
-        color: var(--color_secondary);
-        font-weight: 400;
-
-        &.active {
-          color: var(--color_primary);
-          position: relative;
-          font-weight: 600;
-
-          &::after {
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translate(-50%, 0);
-            content: '';
-            height: 4px;
-            width: 16px;
-            border-radius: 10px;
-            background-color: var(--color_primary);
-          }
-        }
-      }
-    }
-
     &-search {
       width: 100%;
       position: relative;

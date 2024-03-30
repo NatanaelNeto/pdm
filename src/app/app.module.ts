@@ -8,6 +8,9 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CardsComponent } from './pages/cards/cards.component';
 import { DecksComponent } from './pages/decks/decks.component';
+import { ListComponent } from './pages/cards/list/list.component';
+import { DetailsComponent } from './pages/cards/details/details.component';
+import { EditComponent } from './pages/cards/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { DecksComponent } from './pages/decks/decks.component';
     HeaderComponent,
     HomeComponent,
     CardsComponent,
-    DecksComponent
+    DecksComponent,
+    ListComponent,
+    DetailsComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,
