@@ -1,3 +1,15 @@
+.filters {
+  position: relative;
+
+  button {
+    position: absolute;
+    font-size: 14px;
+    padding: 6px 12px;
+    top: 0;
+    right: 0;
+  }
+}
+
 .filter-group {
   margin-top: 16px;
 
@@ -52,6 +64,28 @@
 
     div {
       text-align: center;
+    }
+  }
+
+  &-content {
+
+    .grid {
+      padding: 10px 0;
+      align-items: center;
+
+      div {
+        text-align: center;
+
+        button {
+          padding: 6px;
+          display: flex;
+          align-items: center;
+
+          img {
+            max-height: 20px;
+          }
+        }
+      }
     }
   }
 }

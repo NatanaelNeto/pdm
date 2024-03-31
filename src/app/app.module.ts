@@ -11,6 +11,7 @@ import { DecksComponent } from './pages/decks/decks.component';
 import { ListComponent } from './pages/cards/list/list.component';
 import { DetailsComponent } from './pages/cards/details/details.component';
 import { EditComponent } from './pages/cards/edit/edit.component';
+import { CreateComponent } from './pages/cards/create/create.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { EditComponent } from './pages/cards/edit/edit.component';
     DecksComponent,
     ListComponent,
     DetailsComponent,
-    EditComponent
+    EditComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
