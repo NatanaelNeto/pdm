@@ -1,1 +1,51 @@
-<p>list works!</p>
+<div class="grid">
+  <div class="card grid-c3 primary text-white">
+    <div class="filters">
+      <h3>Filtros</h3>
+      <div class="filters-content">
+        <div class="filter-group">
+          <div class="filter-group-title" (click)="typeFilterDisplay = !typeFilterDisplay">
+            <img src="/assets/svg/caretDown.svg" class="svg-white {{typeFilterDisplay ? 'active' : ''}}" alt="">
+            <h4>Energia</h4>
+          </div>
+          <ng-container *ngIf="typeFilterDisplay">
+            <div class="input-group">
+              <div class="input-toggle {{allTypeFiltered ? 'active' : ''}}" (click)="toggleTypeFilter('Todos')"></div>
+              <p>Todos</p>
+            </div>
+            <div *ngFor="let type of typeFilter" class="input-group">
+              <div class="input-toggle {{type.filtered ? 'active' : ''}}" (click)="toggleTypeFilter(type.type)"></div>
+              <p>{{type.type}}</p>
+            </div>
+          </ng-container>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="card shaded grid-c9">
+    <h3>Lista</h3>
+    <div class="list">
+      <div class="list-header text-secondary grid">
+        <div class="grid-c1">
+          <p>id</p>
+        </div>
+        <div class="grid-c3">
+          <p>Nome</p>
+        </div>
+        <div class="grid-c3">
+          <p>Tipo</p>
+        </div>
+        <div class="grid-c2">
+          <p>Coleção</p>
+        </div>
+        <div class="grid-c2">
+          <p>Código</p>
+        </div>
+        <div class="grid-c1">
+          <p>Qtd</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

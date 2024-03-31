@@ -1,0 +1,57 @@
+.filter-group {
+  margin-top: 16px;
+
+  &-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    img {
+      max-height: 30px;
+
+      &.active {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .input-group {
+    margin-top: 4px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+
+    p {
+      font-size: 12px;
+    }
+
+    .input-toggle {
+      width: 16px;
+      height: 16px;
+      border: 2px solid var(--white);
+      border-radius: 2px;
+      margin-right: 10px;
+
+      &.active {
+        background-color: var(--white);
+      }
+    }
+  }
+}
+
+.list {
+  margin-top: 20px;
+
+  * {
+    font-size: 14px;
+  }
+
+  &-header {
+    border-bottom: 1px solid var(--color_secondary);
+    padding-bottom: 10px;
+
+    div {
+      text-align: center;
+    }
+  }
+}

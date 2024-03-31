@@ -32,12 +32,15 @@ h1 {
 
 h2 {
   font-size: 32px;
+  font-weight: 300;
 }
 
 h3 {
   font-size: 24px;
+  font-weight: 300;
 }
 
+h4,
 p,
 span,
 li {
@@ -56,14 +59,23 @@ img.svg {
   &-primary {
     filter: invert(13%) sepia(61%) saturate(6314%) hue-rotate(173deg) brightness(97%) contrast(101%);
   }
+
+  &-white {
+    filter: invert(100%);
+  }
 }
 
 .content {
   padding: 40px 60px;
-  max-width: 1100px;
+  max-width: 1200px;
+  margin: 0 auto;
 
   .title {
     margin-bottom: 40px;
+  }
+
+  &-inside {
+    margin-top: 40px;
   }
 }
 
@@ -96,6 +108,159 @@ nav ul {
 
     &:first-child {
       padding-left: 5px;
+
+      &::after {
+        left: calc(50% - 10px);
+      }
     }
   }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+
+  &-c1 {
+    grid-column-start: span 1;
+  }
+
+  &-c2 {
+    grid-column-start: span 2;
+  }
+
+  &-c3 {
+    grid-column-start: span 3;
+  }
+
+  &-c4 {
+    grid-column-start: span 4;
+  }
+
+  &-c5 {
+    grid-column-start: span 5;
+  }
+
+  &-c6 {
+    grid-column-start: span 6;
+  }
+
+  &-c7 {
+    grid-column-start: span 7;
+  }
+
+  &-c8 {
+    grid-column-start: span 8;
+  }
+
+  &-c9 {
+    grid-column-start: span 9;
+  }
+
+  &-c10 {
+    grid-column-start: span 10;
+  }
+
+  &-c11 {
+    grid-column-start: span 11;
+  }
+
+  &-c12 {
+    grid-column-start: span 12;
+  }
+
+  &-r1 {
+    grid-row-start: span 1;
+  }
+
+  &-r2 {
+    grid-row-start: span 2;
+  }
+
+  &-r3 {
+    grid-row-start: span 3;
+  }
+
+  &-r4 {
+    grid-row-start: span 4;
+  }
+
+  &-r5 {
+    grid-row-start: span 5;
+  }
+
+  &-r6 {
+    grid-row-start: span 6;
+  }
+
+  &-r7 {
+    grid-row-start: span 7;
+  }
+
+  &-r8 {
+    grid-row-start: span 8;
+  }
+
+  &-r9 {
+    grid-row-start: span 9;
+  }
+
+  &-r10 {
+    grid-row-start: span 10;
+  }
+
+  &-r11 {
+    grid-row-start: span 11;
+  }
+
+  &-r12 {
+    grid-row-start: span 12;
+  }
+}
+
+.card {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 16px;
+
+  &.shaded {
+    box-shadow: 0 2px 4px color-mix(in srgb, var(--color_primary_shadow) 5%, var(--black) 2%);
+  }
+}
+
+
+.primary {
+  background-color: var(--color_primary);
+}
+
+.secondary {
+  background-color: var(--color_secondary);
+}
+
+.warning {
+  background-color: var(--color_warning);
+}
+
+.danger {
+  background-color: var(--color_danger);
+}
+
+.text-primary {
+  color: var(--color_primary);
+}
+
+.text-secondary {
+  color: var(--color_secondary);
+}
+
+.text-warning {
+  color: var(--color_warning);
+}
+
+.text-danger {
+  color: var(--color_danger);
+}
+
+.text-white {
+  color: var(--white);
 }
