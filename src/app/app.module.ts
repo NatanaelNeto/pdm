@@ -12,6 +12,7 @@ import { ListComponent } from './pages/cards/list/list.component';
 import { DetailsComponent } from './pages/cards/details/details.component';
 import { EditComponent } from './pages/cards/edit/edit.component';
 import { CreateComponent } from './pages/cards/create/create.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CreateComponent } from './pages/cards/create/create.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule
+    MatIconModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

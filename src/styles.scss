@@ -15,9 +15,9 @@
   --color_secondary: #809696;
   --color_secondary_light: hsl(180, 9%, 70%);
   --color_secondary_shadow: hsl(180, 9%, 40%);
-  --color_accent: #58588d;
-  --color_accent_light: hsl(240, 23%, 60%);
-  --color_accent_shadow: hsl(240, 23%, 30%);
+  --color_accent: #3FBE75;
+  --color_accent_light: hsl(145, 50%, 65%);
+  --color_accent_shadow: hsl(145, 50%, 35%);
 
   --background: #f0f7f7;
   --white: #fff;
@@ -56,6 +56,34 @@ body {
   height: 100vh;
   width: 100%;
   color: var(--black);
+}
+
+input,
+select {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--color_secondary);
+  font-weight: 300;
+  width: 100%;
+
+  &:focus {
+    outline: solid 3px var(--color_primary);
+  }
+}
+
+select {
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  cursor: pointer;
+
+  option:hover {
+    background-color: var(--color_primary);
+    color: var(--white);
+  }
 }
 
 img.svg {
@@ -251,6 +279,21 @@ nav ul {
 
   &-r12 {
     grid-row-start: span 12;
+  }
+}
+
+.input-group {
+  position: relative;
+
+  .placeholder {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    font-size: 10px;
+    color: var(--color_secondary_light);
+    border-radius: 10px;
+    left: 20px;
+    top: 2px;
   }
 }
 

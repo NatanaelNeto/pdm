@@ -1,0 +1,24 @@
+.create {
+  &-content {
+    &-form {
+      margin-top: 10px;
+    }
+  }
+}
+
+.select {
+  position: relative;
+
+  select {
+    z-index: 5;
+  }
+
+  img {
+    z-index: 10;
+    position: absolute;
+    right: 10px;
+    max-height: 20px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}

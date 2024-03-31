@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EnergyEnum } from 'src/app/enums/energy';
 
 @Component({
   selector: 'app-list',
@@ -8,39 +9,39 @@ import { Component } from '@angular/core';
 export class ListComponent {
   typeFilter = [
     {
-      type: 'Incolor',
+      type: EnergyEnum.water,
       filtered: false,
     },
     {
-      type: 'Planta',
+      type: EnergyEnum.fire,
       filtered: false,
     },
     {
-      type: 'Fogo',
+      type: EnergyEnum.plant,
       filtered: false,
     },
     {
-      type: 'Água',
+      type: EnergyEnum.dark,
       filtered: false,
     },
     {
-      type: 'Luta',
+      type: EnergyEnum.psychic,
       filtered: false,
     },
     {
-      type: 'Raio',
+      type: EnergyEnum.fight,
       filtered: false,
     },
     {
-      type: 'Psíquica',
+      type: EnergyEnum.light,
       filtered: false,
     },
     {
-      type: 'Metal',
+      type: EnergyEnum.metal,
       filtered: false,
     },
     {
-      type: 'Escuridão',
+      type: EnergyEnum.incolor,
       filtered: false,
     },
   ]

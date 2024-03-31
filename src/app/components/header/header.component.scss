@@ -16,20 +16,6 @@ header {
       width: 100%;
       position: relative;
 
-      input {
-        padding: 15px 20px;
-        border: none;
-        border-radius: 20px;
-        font-size: 14px;
-        color: var(--color_secondary);
-        font-weight: 300;
-        min-width: 300px;
-
-        &:focus {
-          outline: solid 3px var(--color_primary);
-        }
-      }
-
       img {
         height: 20px;
         position: absolute;
