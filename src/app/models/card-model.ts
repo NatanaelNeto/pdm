@@ -7,6 +7,7 @@ export default class CardModel {
   type: EnergyEnum;
   collection: string;
   code: string;
+  rotation: string;
   location: 'Deck' | 'Caixa' | 'Lista de Desejos';
   deck: DeckModel | null;
   imageUrl: string | null;

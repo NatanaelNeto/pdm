@@ -12,9 +12,10 @@ export class CreateComponent {
   card: CardModel = {
     id: 0,
     name: '',
-    type: EnergyEnum.fire,
+    type: EnergyEnum.null,
     collection: '',
     code: '',
+    rotation: '',
     location: LocationEnum.box,
     deck: null,
     imageUrl: '',
@@ -38,8 +39,11 @@ export class CreateComponent {
     else if (this.card.code.length == 0) {
       this.sendAlert('Preencha o campo Código');
     }
-    else if (!this.card.imageUrl || this.card.imageUrl.length < 5) {
+    else if (!this.card.imageUrl) {
       this.sendAlert('Insira a imagem da carta');
+    }
+    else if (this.card.type == EnergyEnum.null) {
+      this.sendAlert('Selecione o tipo da carta');
     }
   }
 

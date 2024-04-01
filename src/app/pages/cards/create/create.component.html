@@ -11,7 +11,9 @@
           <div class="placeholder">Tipo</div>
           <img src="/assets/svg/caretDown.svg" class="svg-primary" alt="">
           <select class="shaded" name="type" [(ngModel)]="card.type">
-            <option *ngFor="let type of energyEnum | keyvalue" [value]="type.key">{{type.value}}</option>
+            <ng-container *ngFor="let type of energyEnum | keyvalue">
+              <option *ngIf="type.value != 'null'" [value]="type.key">{{type.value}}</option>
+            </ng-container>
           </select>
         </div>
 
@@ -27,13 +29,19 @@
           <div class="placeholder">Localização</div>
           <img src="/assets/svg/caretDown.svg" class="svg-primary" alt="">
           <select class="shaded" name="type" [(ngModel)]="card.location">
-            <option *ngFor="let type of locationEnum | keyvalue" [value]="type.key">{{type.value}}</option>
+            <ng-container *ngFor="let type of locationEnum | keyvalue">
+              <option *ngIf="type.value != 'Deck'" [value]="type.key">{{type.value}}</option>
+            </ng-container>
           </select>
         </div>
 
-        <div class="grid-c6 input-group">
+        <div class="grid-c4 input-group">
           <div class="placeholder">Deck</div>
           <input class="shaded" type="text" disabled="true" [(ngModel)]="card.deck">
+        </div>
+        <div class="grid-c2 input-group">
+          <div class="placeholder">Rotação</div>
+          <input class="shaded" type="text" [(ngModel)]="card.rotation">
         </div>
         <div class="grid-c6 input-group">
           <div class="placeholder">URL da Imagem</div>
@@ -44,7 +52,7 @@
           <p *ngIf="toAlert">{{alertMessage}}</p>
         </div>
         <div class="grid-c3">
-          <button (click)="save()" class="btn-primary shaded">Salvar</button>
+          <button (click)="save()" class="btn-primary shaded rounded">Salvar</button>
         </div>
       </div>
     </div>

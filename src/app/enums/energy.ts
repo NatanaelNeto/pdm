@@ -1,4 +1,5 @@
 export enum EnergyEnum {
+  null = 'null',
   fire = 'Fogo',
   dark = 'Escuridão',
   light = 'Raio',
@@ -8,4 +9,8 @@ export enum EnergyEnum {
   fight = 'Lutador',
   psychic = 'Psíquica',
   incolor = 'Incolor',
+  item = 'Item',
+  sup = 'Apoiador',
+  tool = 'Ferramenta',
+  stadium = 'Estádio'
 }

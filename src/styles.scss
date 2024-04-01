@@ -71,6 +71,10 @@ select {
   &:focus {
     outline: solid 3px var(--color_primary);
   }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 select {
@@ -118,6 +122,10 @@ button {
   padding: 15px 20px;
   font-size: 14px;
   height: 100%;
+
+  &.rounded {
+    border-radius: 20px;
+  }
 
   &.btn-primary {
     background-color: var(--color_primary);
