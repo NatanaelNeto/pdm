@@ -1,16 +1,4 @@
 {
-  "cards": [
-    {
-      "id": "0asd",
-      "name": "Greninja Radiante",
-      "type": "Água",
-      "collection": "ASR",
-      "code": "046/189",
-      "rotation": "F",
-      "location": "Caixa",
-      "deck": null,
-      "imageUrl": "https://limitlesstcg.nyc3.digitaloceanspaces.com/tpci/ASR/ASR_046_R_EN_LG.png"
-    }
-  ],
+  "cards": [],
   "decks": []
 }
