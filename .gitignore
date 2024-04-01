@@ -43,4 +43,4 @@ Thumbs.db
 
 # Database
 /backend/node_modules
-/backend/db.json
+backend/db.json

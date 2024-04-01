@@ -44,46 +44,20 @@
           <p>Código</p>
         </div>
         <div class="grid-c1">
-          <p>Qtd</p>
+          <p>Rotação</p>
         </div>
         <div class="grid-c1"></div>
       </div>
       <div class="list-content">
-        <div class="grid">
-          <div class="grid-c1">0</div>
-          <div class="grid-c4">Greninja Radiante</div>
-          <div class="grid-c2">Água</div>
-          <div class="grid-c1">BRS</div>
-          <div class="grid-c2">046/189</div>
-          <div class="grid-c1">2</div>
+        <div class="grid" *ngFor="let card of cards">
+          <div class="grid-c1">{{card.id}}</div>
+          <div class="grid-c4">{{card.name}}</div>
+          <div class="grid-c2">{{card.type}}</div>
+          <div class="grid-c1">{{card.collection}}</div>
+          <div class="grid-c2">{{card.code}}</div>
+          <div class="grid-c1">{{card.rotation}}</div>
           <div class="grid-c1">
             <button class="btn-primary">
-              <img class="svg-white" src="/assets/svg/detail.svg" alt="">
-            </button>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="grid-c1">1</div>
-          <div class="grid-c4">Alakazam Radiante</div>
-          <div class="grid-c2">Psíquico</div>
-          <div class="grid-c1">SIT</div>
-          <div class="grid-c2">059/195</div>
-          <div class="grid-c1">1</div>
-          <div class="grid-c1">
-            <button class="btn-primary">
-              <img class="svg-white" src="/assets/svg/detail.svg" alt="">
-            </button>
-          </div>
-        </div>
-        <div class="grid">
-          <div class="grid-c1">2</div>
-          <div class="grid-c4">Heatran Radiante</div>
-          <div class="grid-c2">Fogo</div>
-          <div class="grid-c1">ASR</div>
-          <div class="grid-c2">027/189</div>
-          <div class="grid-c1">1</div>
-          <div class="grid-c1">
-            <button class="btn-primary info">
               <img class="svg-white" src="/assets/svg/detail.svg" alt="">
             </button>
           </div>

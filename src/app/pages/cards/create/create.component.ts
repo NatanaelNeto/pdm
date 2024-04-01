@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { EnergyEnum } from 'src/app/enums/energy';
 import { LocationEnum } from 'src/app/enums/location';
 import CardModel from 'src/app/models/card-model';
+import { CardService } from 'src/app/services/card.service';
 
 @Component({
   selector: 'app-create',
@@ -10,7 +11,6 @@ import CardModel from 'src/app/models/card-model';
 })
 export class CreateComponent {
   card: CardModel = {
-    id: 0,
     name: '',
     type: EnergyEnum.null,
     collection: '',
@@ -27,24 +27,36 @@ export class CreateComponent {
   alertMessage: string = '';
   toAlert: boolean;
   alertTimeout: any;
-  constructor() { }
+  constructor(private db: CardService) { }
 
   save() {
     if (this.card.name.length < 3) {
       this.sendAlert('Preencha o campo Nome');
+      return;
     }
     else if (this.card.collection.length == 0) {
       this.sendAlert('Preencha o campo Coleção');
+      return;
     }
     else if (this.card.code.length == 0) {
       this.sendAlert('Preencha o campo Código');
+      return;
     }
     else if (!this.card.imageUrl) {
       this.sendAlert('Insira a imagem da carta');
+      return;
     }
     else if (this.card.type == EnergyEnum.null) {
       this.sendAlert('Selecione o tipo da carta');
+      return;
     }
+    else if (this.card.rotation.length < 1) {
+      this.sendAlert('Preencha o campo Rotação');
+      return;
+    }
+    this.db.post(this.card).subscribe(() => {
+      this.sendAlert('Carta salva!');
+    });
   }
 
   sendAlert(message: string) {

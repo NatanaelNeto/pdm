@@ -12,7 +12,7 @@
           <img src="/assets/svg/caretDown.svg" class="svg-primary" alt="">
           <select class="shaded" name="type" [(ngModel)]="card.type">
             <ng-container *ngFor="let type of energyEnum | keyvalue">
-              <option *ngIf="type.value != 'null'" [value]="type.key">{{type.value}}</option>
+              <option *ngIf="type.value != 'null'" [value]="type.value">{{type.value}}</option>
             </ng-container>
           </select>
         </div>
@@ -30,7 +30,7 @@
           <img src="/assets/svg/caretDown.svg" class="svg-primary" alt="">
           <select class="shaded" name="type" [(ngModel)]="card.location">
             <ng-container *ngFor="let type of locationEnum | keyvalue">
-              <option *ngIf="type.value != 'Deck'" [value]="type.key">{{type.value}}</option>
+              <option *ngIf="type.value != 'Deck'" [value]="type.value">{{type.value}}</option>
             </ng-container>
           </select>
         </div>

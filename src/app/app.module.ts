@@ -13,6 +13,7 @@ import { DetailsComponent } from './pages/cards/details/details.component';
 import { EditComponent } from './pages/cards/edit/edit.component';
 import { CreateComponent } from './pages/cards/create/create.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

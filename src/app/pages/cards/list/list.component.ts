@@ -1,12 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { EnergyEnum } from 'src/app/enums/energy';
+import CardModel from 'src/app/models/card-model';
+import { CardService } from 'src/app/services/card.service';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.scss']
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
   typeFilter = [
     {
       type: EnergyEnum.water,
@@ -48,7 +50,13 @@ export class ListComponent {
   allTypeFiltered = false;
   typeFilterDisplay = false;
 
-  constructor() { }
+  cards: CardModel[] = [];
+
+  constructor(private db: CardService) { }
+
+  ngOnInit(): void {
+    this.db.get().subscribe(cards => this.cards = cards);
+  }
 
   toggleTypeFilter(type: string) {
     if (type == 'Todos') {

@@ -2,7 +2,7 @@ import { EnergyEnum } from "../enums/energy";
 import DeckModel from "./deck-model";
 
 export default class CardModel {
-  id: number;
+  id?: number;
   name: string;
   type: EnergyEnum;
   collection: string;
