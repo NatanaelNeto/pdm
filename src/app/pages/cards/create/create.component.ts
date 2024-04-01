@@ -17,11 +17,39 @@ export class CreateComponent {
     code: '',
     location: LocationEnum.box,
     deck: null,
-    imageUrl: null
+    imageUrl: '',
   }
 
   locationEnum = LocationEnum;
   energyEnum = EnergyEnum;
+
+  alertMessage: string = '';
+  toAlert: boolean;
+  alertTimeout: any;
   constructor() { }
 
+  save() {
+    if (this.card.name.length < 3) {
+      this.sendAlert('Preencha o campo Nome');
+    }
+    else if (this.card.collection.length == 0) {
+      this.sendAlert('Preencha o campo Coleção');
+    }
+    else if (this.card.code.length == 0) {
+      this.sendAlert('Preencha o campo Código');
+    }
+    else if (!this.card.imageUrl || this.card.imageUrl.length < 5) {
+      this.sendAlert('Insira a imagem da carta');
+    }
+  }
+
+  sendAlert(message: string) {
+    clearTimeout(this.alertTimeout);
+
+    this.alertMessage = message;
+    this.toAlert = true;
+    this.alertTimeout = setTimeout(() => {
+      this.toAlert = false;
+    }, 5000);
+  }
 }

@@ -4,6 +4,17 @@
       margin-top: 10px;
     }
   }
+
+  &-card-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      border-radius: 12px;
+      max-height: 360px;
+    }
+  }
 }
 
 .select {
@@ -20,5 +31,13 @@
     max-height: 20px;
     top: 50%;
     transform: translate(0, -50%);
+  }
+}
+
+.card.warning {
+  padding: 15px 20px;
+
+  p {
+    font-size: 14px;
   }
 }

@@ -14,6 +14,7 @@
             <option *ngFor="let type of energyEnum | keyvalue" [value]="type.key">{{type.value}}</option>
           </select>
         </div>
+
         <div class="grid-c4 input-group">
           <div class="placeholder">Coleção</div>
           <input class="shaded" type="text" [(ngModel)]="card.collection">
@@ -29,11 +30,27 @@
             <option *ngFor="let type of locationEnum | keyvalue" [value]="type.key">{{type.value}}</option>
           </select>
         </div>
+
+        <div class="grid-c6 input-group">
+          <div class="placeholder">Deck</div>
+          <input class="shaded" type="text" disabled="true" [(ngModel)]="card.deck">
+        </div>
+        <div class="grid-c6 input-group">
+          <div class="placeholder">URL da Imagem</div>
+          <input class="shaded" type="text" [(ngModel)]="card.imageUrl">
+        </div>
+
+        <div class="grid-c9 {{toAlert ? 'card warning' : ''}}">
+          <p *ngIf="toAlert">{{alertMessage}}</p>
+        </div>
+        <div class="grid-c3">
+          <button (click)="save()" class="btn-primary shaded">Salvar</button>
+        </div>
       </div>
     </div>
 
     <div class="create-card-image grid-c4 grid-r12">
-      <img *ngIf="card.imageUrl" src="{{card.imageUrl}}" alt="">
+      <img class="shaded" *ngIf="card.imageUrl" src="{{card.imageUrl}}" alt="{{card.name}}">
       <p *ngIf="!card.imageUrl">Sem imagem</p>
     </div>
   </div>
