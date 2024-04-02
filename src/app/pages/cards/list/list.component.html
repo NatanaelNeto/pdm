@@ -49,7 +49,7 @@
         <div class="grid-c1"></div>
       </div>
       <div class="list-content">
-        <div class="grid" *ngFor="let card of cards">
+        <div class="grid {{card.location == 'Lista de Desejo' ? 'wishlist': ''}}" *ngFor="let card of cards">
           <div class="grid-c1">{{card.id}}</div>
           <div class="grid-c4">{{card.name}}</div>
           <div class="grid-c2">{{card.type}}</div>

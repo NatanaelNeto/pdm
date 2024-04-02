@@ -27,6 +27,7 @@ export class CreateComponent {
   alertMessage: string = '';
   toAlert: boolean;
   alertTimeout: any;
+  toSave: boolean = true;
   constructor(private db: CardService) { }
 
   save() {
@@ -54,9 +55,14 @@ export class CreateComponent {
       this.sendAlert('Preencha o campo Rotação');
       return;
     }
-    this.db.post(this.card).subscribe(() => {
-      this.sendAlert('Carta salva!');
-    });
+
+    if(this.toSave) {
+      this.toSave = false;
+      this.db.post(this.card).subscribe(() => {
+        this.sendAlert('Carta salva!');
+        setTimeout(() => this.toSave = true, 5000);
+      });
+    }
   }
 
   sendAlert(message: string) {

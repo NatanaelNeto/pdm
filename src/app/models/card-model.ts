@@ -8,7 +8,7 @@ export default class CardModel {
   collection: string;
   code: string;
   rotation: string;
-  location: 'Deck' | 'Caixa' | 'Lista de Desejos';
+  location: 'Deck' | 'Caixa' | 'Lista de Desejo';
   deck: DeckModel | null;
   imageUrl: string | null;
 }

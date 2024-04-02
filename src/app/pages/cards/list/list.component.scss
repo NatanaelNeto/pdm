@@ -91,5 +91,10 @@
         }
       }
     }
+
+    .wishlist {
+      font-style: italic;
+      color: var(--color_danger) !important;
+    }
   }
 }
