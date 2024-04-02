@@ -1,1 +1,358 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --color_primary: #066;
+  --color_primary_light: hsl(180, 100%, 25%);
+  --color_primary_shadow: hsl(180, 100%, 15%);
+  --color_secondary: #809696;
+  --color_secondary_light: hsl(180, 9%, 70%);
+  --color_secondary_shadow: hsl(180, 9%, 40%);
+  --color_accent: #3FBE75;
+  --color_accent_light: hsl(145, 50%, 65%);
+  --color_accent_shadow: hsl(145, 50%, 35%);
+
+  --background: #f0f7f7;
+  --white: #fff;
+  --black: #0a2929;
+
+  --color_sucess: #066;
+  --color_warning: #ffbc00;
+  --color_danger: #ff8866;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+h4,
+p,
+span,
+li {
+  font-size: 18px;
+}
+
+html,
+body {
+  background-color: var(--background);
+  height: 100vh;
+  width: 100%;
+  color: var(--black);
+}
+
+input,
+select {
+  padding: 15px 20px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  color: var(--color_secondary);
+  font-weight: 300;
+  width: 100%;
+
+  &:focus {
+    outline: solid 3px var(--color_primary);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #f0f5f5;
+  }
+}
+
+select {
+  appearance: none;
+  /* safari */
+  -webkit-appearance: none;
+  /* other styles for aesthetics */
+  cursor: pointer;
+
+  option:hover {
+    background-color: var(--color_primary);
+    color: var(--white);
+  }
+}
+
+img.svg {
+  &-primary {
+    filter: brightness(0) saturate(100%) invert(13%) sepia(61%) saturate(6314%) hue-rotate(173deg) brightness(97%) contrast(101%);
+  }
+
+  &-white {
+    filter: brightness(0) saturate(100%) invert(100%);
+  }
+}
+
+.content {
+  padding: 40px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  &-inside {
+    margin-top: 40px;
+  }
+}
+
+button {
+  border: none;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 15px 20px;
+  font-size: 14px;
+  height: 100%;
+
+  &.rounded {
+    border-radius: 20px;
+  }
+
+  &.btn-primary {
+    background-color: var(--color_primary);
+    color: var(--white);
+
+    &:hover {
+      background-color: var(--color_primary_light);
+    }
+  }
+
+  &.btn-accent {
+    color: var(--white);
+    background-color: var(--color_accent);
+
+    &:hover {
+      background-color: var(--color_accent_light);
+    }
+  }
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+
+  li {
+    cursor: pointer;
+    padding: 0 20px;
+    color: var(--color_secondary);
+    font-weight: 400;
+
+    &.active {
+      color: var(--color_primary);
+      position: relative;
+      font-weight: 600;
+
+      &:hover {
+        color: var(--color_primary_light);
+      }
+
+      &::after {
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        content: '';
+        height: 4px;
+        width: 16px;
+        border-radius: 10px;
+        background-color: var(--color_primary);
+      }
+    }
+
+    &:hover {
+      color: var(--color_secondary_light);
+    }
+
+    &:first-child {
+      padding-left: 5px;
+
+      &::after {
+        left: calc(50% - 10px);
+      }
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+
+  &-c1 {
+    grid-column-start: span 1;
+  }
+
+  &-c2 {
+    grid-column-start: span 2;
+  }
+
+  &-c3 {
+    grid-column-start: span 3;
+  }
+
+  &-c4 {
+    grid-column-start: span 4;
+  }
+
+  &-c5 {
+    grid-column-start: span 5;
+  }
+
+  &-c6 {
+    grid-column-start: span 6;
+  }
+
+  &-c7 {
+    grid-column-start: span 7;
+  }
+
+  &-c8 {
+    grid-column-start: span 8;
+  }
+
+  &-c9 {
+    grid-column-start: span 9;
+  }
+
+  &-c10 {
+    grid-column-start: span 10;
+  }
+
+  &-c11 {
+    grid-column-start: span 11;
+  }
+
+  &-c12 {
+    grid-column-start: span 12;
+  }
+
+  &-r1 {
+    grid-row-start: span 1;
+  }
+
+  &-r2 {
+    grid-row-start: span 2;
+  }
+
+  &-r3 {
+    grid-row-start: span 3;
+  }
+
+  &-r4 {
+    grid-row-start: span 4;
+  }
+
+  &-r5 {
+    grid-row-start: span 5;
+  }
+
+  &-r6 {
+    grid-row-start: span 6;
+  }
+
+  &-r7 {
+    grid-row-start: span 7;
+  }
+
+  &-r8 {
+    grid-row-start: span 8;
+  }
+
+  &-r9 {
+    grid-row-start: span 9;
+  }
+
+  &-r10 {
+    grid-row-start: span 10;
+  }
+
+  &-r11 {
+    grid-row-start: span 11;
+  }
+
+  &-r12 {
+    grid-row-start: span 12;
+  }
+}
+
+.input-group {
+  position: relative;
+
+  .placeholder {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    font-size: 10px;
+    color: var(--color_secondary_light);
+    border-radius: 10px;
+    left: 20px;
+    top: 2px;
+  }
+}
+
+.card {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 16px;
+
+}
+
+.shaded {
+  box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.1);
+}
+
+.primary {
+  background-color: var(--color_primary);
+}
+
+.secondary {
+  background-color: var(--color_secondary);
+}
+
+.warning {
+  background-color: var(--color_warning);
+}
+
+.danger {
+  background-color: var(--color_danger);
+}
+
+.text-primary {
+  color: var(--color_primary);
+}
+
+.text-secondary {
+  color: var(--color_secondary);
+}
+
+.text-warning {
+  color: var(--color_warning);
+}
+
+.text-danger {
+  color: var(--color_danger);
+}
+
+.text-white {
+  color: var(--white);
+}

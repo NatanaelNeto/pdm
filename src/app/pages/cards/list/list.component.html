@@ -1,0 +1,68 @@
+<div class="grid">
+  <div class="card shaded grid-c3 primary text-white">
+    <div class="filters">
+      <h3>Filtros</h3>
+      <button class="btn-accent shaded">Aplicar</button>
+      <div class="filters-content">
+        <div class="filter-group">
+          <div class="filter-group-title" (click)="typeFilterDisplay = !typeFilterDisplay">
+            <img src="/assets/svg/caretDown.svg" class="svg-white {{typeFilterDisplay ? 'active' : ''}}" alt="">
+            <h4>Energia</h4>
+          </div>
+          <ng-container *ngIf="typeFilterDisplay">
+            <div class="input-group">
+              <div class="input-toggle {{allTypeFiltered ? 'active' : ''}}" (click)="toggleTypeFilter('Todos')"></div>
+              <p>Todos</p>
+            </div>
+            <div *ngFor="let type of typeFilter" class="input-group">
+              <div class="input-toggle {{type.filtered ? 'active' : ''}}" (click)="toggleTypeFilter(type.type)"></div>
+              <p>{{type.type}}</p>
+            </div>
+          </ng-container>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="card shaded grid-c9">
+    <h3>Lista</h3>
+    <div class="list">
+      <div class="list-header text-secondary grid">
+        <div class="grid-c1">
+          <p>id</p>
+        </div>
+        <div class="grid-c4">
+          <p>Nome</p>
+        </div>
+        <div class="grid-c2">
+          <p>Tipo</p>
+        </div>
+        <div class="grid-c1">
+          <p>Coleção</p>
+        </div>
+        <div class="grid-c2">
+          <p>Código</p>
+        </div>
+        <div class="grid-c1">
+          <p>Rotação</p>
+        </div>
+        <div class="grid-c1"></div>
+      </div>
+      <div class="list-content">
+        <div class="grid {{card.location == 'Lista de Desejo' ? 'wishlist': ''}}" *ngFor="let card of cards">
+          <div class="grid-c1">{{card.id}}</div>
+          <div class="grid-c4">{{card.name}}</div>
+          <div class="grid-c2">{{card.type}}</div>
+          <div class="grid-c1">{{card.collection}}</div>
+          <div class="grid-c2">{{card.code}}</div>
+          <div class="grid-c1">{{card.rotation}}</div>
+          <div class="grid-c1">
+            <button class="btn-primary">
+              <img class="svg-white" src="/assets/svg/detail.svg" alt="">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

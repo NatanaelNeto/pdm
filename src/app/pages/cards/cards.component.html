@@ -1,0 +1,17 @@
+<app-header></app-header>
+<section class="content">
+  <div class="title">
+    <h1>Cartas</h1>
+  </div>
+  <nav>
+    <ul>
+      <li routerLink="/cartas/listar" routerLinkActive="active">Listar</li>
+      <li routerLink="/cartas/detalhes" routerLinkActive="active">Detalhes</li>
+      <li routerLink="/cartas/editar" routerLinkActive="active">Editar</li>
+      <li routerLink="/cartas/criar" routerLinkActive="active">Criar</li>
+    </ul>
+  </nav>
+  <div class="content-inside">
+    <router-outlet></router-outlet>
+  </div>
+</section>

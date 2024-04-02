@@ -1,0 +1,65 @@
+<section class="create">
+  <div class="card shaded grid">
+    <div class="create-content grid-c8 grid-r12">
+      <h3>Criar</h3>
+      <div class="create-content-form grid">
+        <div class="grid-c8 input-group">
+          <div class="placeholder">Nome</div>
+          <input type="text" [(ngModel)]="card.name" class="shaded">
+        </div>
+        <div class="grid-c4 input-group select">
+          <div class="placeholder">Tipo</div>
+          <img src="/assets/svg/caretDown.svg" class="svg-primary" alt="">
+          <select class="shaded" name="type" [(ngModel)]="card.type">
+            <ng-container *ngFor="let type of energyEnum | keyvalue">
+              <option *ngIf="type.value != 'null'" [value]="type.value">{{type.value}}</option>
+            </ng-container>
+          </select>
+        </div>
+
+        <div class="grid-c4 input-group">
+          <div class="placeholder">Coleção</div>
+          <input class="shaded" type="text" [(ngModel)]="card.collection">
+        </div>
+        <div class="grid-c4 input-group">
+          <div class="placeholder">Código</div>
+          <input class="shaded" type="text" [(ngModel)]="card.code">
+        </div>
+        <div class="grid-c4 input-group select">
+          <div class="placeholder">Localização</div>
+          <img src="/assets/svg/caretDown.svg" class="svg-primary" alt="">
+          <select class="shaded" name="type" [(ngModel)]="card.location">
+            <ng-container *ngFor="let type of locationEnum | keyvalue">
+              <option *ngIf="type.value != 'Deck'" [value]="type.value">{{type.value}}</option>
+            </ng-container>
+          </select>
+        </div>
+
+        <div class="grid-c4 input-group">
+          <div class="placeholder">Deck</div>
+          <input class="shaded" type="text" disabled="true" [(ngModel)]="card.deck">
+        </div>
+        <div class="grid-c2 input-group">
+          <div class="placeholder">Rotação</div>
+          <input class="shaded" type="text" [(ngModel)]="card.rotation">
+        </div>
+        <div class="grid-c6 input-group">
+          <div class="placeholder">URL da Imagem</div>
+          <input class="shaded" type="text" [(ngModel)]="card.imageUrl">
+        </div>
+
+        <div class="grid-c9 {{toAlert ? 'card warning' : ''}}">
+          <p *ngIf="toAlert">{{alertMessage}}</p>
+        </div>
+        <div class="grid-c3">
+          <button (click)="save()" class="btn-primary shaded rounded">Salvar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="create-card-image grid-c4 grid-r12">
+      <img class="shaded" *ngIf="card.imageUrl" src="{{card.imageUrl}}" alt="{{card.name}}">
+      <p *ngIf="!card.imageUrl">Sem imagem</p>
+    </div>
+  </div>
+</section>
